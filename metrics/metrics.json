@@ -1,0 +1,335 @@
+[
+	{
+		"basepath" : "Cisco-IOS-XR-controller-optics-oper:optics-oper/optics-ports/optics-port/optics-info",
+		"spec" : {
+			"fields" : [
+				{"name":"name", "tag": true},
+				{"name" : "name", "tag" : true},
+				{"name" : "controller-state"},
+				{"name" : "dwdm-carrier-channel"},
+				{"name" : "dwdm-carrier-wavelength"},
+				{"name" : "optical-signal-to-noise-ratio"},
+				{"name" : "optics-type"},
+				{"name" : "total-rx-power"},
+				{"name" : "total-tx-power"},
+				{"name" : "voltage"},
+				{"name" : "temperature",
+					"name":"lane-data",
+					"fields" : [
+						{"name":"lane-index", "tag": true},
+						{"name":"laser-bias-current-milli-amps"},
+						{"name":"receive-power"},
+						{"name":"transmit-power"}
+					]
+				}
+			]
+		}
+	},
+	{
+		"basepath" : "Cisco-IOS-XR-nto-misc-oper:memory-summary/nodes/node/summary",
+		"spec" : {
+			"fields" : [
+				{"name":"node-name", "tag": true},
+				{"name":"ram-memory"},
+				{"name":"free-physical-memory"},
+				{"name":"system-ram-memory"},
+				{"name":"free-application-memory"}
+			]
+		}
+	},
+	{
+			"basepath" : "Cisco-IOS-XR-plat-chas-invmgr-oper:platform-inventory/racks/rack/attributes/basic-info",
+			"spec" : {
+					"fields" : [
+							{"name" : "name", "tag" : true},
+							{"name" : "hardware-revision"},
+							{"name" : "is-field-replaceable-unit"},
+							{"name" : "model-name"},
+							{"name" : "serial-number"},
+							{"name" : "software-revision"}
+					]
+			}
+	},
+	{
+			"basepath" : "Cisco-IOS-XR-plat-chas-invmgr-oper:platform-inventory/racks/rack/slots/slot/cards/card/port-slots/port-slot/portses/ports/hw-components/hw-component/attributes/basic-info",
+			"spec" : {
+					"fields" : [
+							{"name" : "name", "tag" : true},
+							{"name" : "hardware-revision"},
+							{"name" : "model-name"},
+							{"name" : "serial-number"},
+							{"name" : "name"}
+					]
+			}
+	},
+	{
+		"basepath" : "Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization",
+		"spec" : {
+			"fields" : [
+				{"name":"node-name", "tag": true},
+				{"name":"total-cpu-one-minute"},
+				{"name":"total-cpu-five-minute"},
+				{"name":"total-cpu-fifteen-minute"},
+				{"name":"process-cpu",
+					"fields" : [
+						{"name":"process-name", "tag": true},
+						{"name":"process-cpu-one-minute"},
+						{"name":"process-cpu-five-minute"},
+						{"name":"process-cpu-fifteen-minute"}
+					]
+				}
+			]
+		}
+	},
+	{
+			"basepath" : "Cisco-IOS-XR-pmengine-oper:performance-management/optics/optics-ports/optics-port/optics-current/optics-second30/optics-second30-optics/optics-second30-optic",
+			"spec" : {
+				"fields" : [
+					{"name":"name", "tag": true},
+					{"name":"number",
+						"fields" : [
+							{"name" : "cd",
+								"fields" : [
+									{"name":"average"},
+									{"name":"maximum"},
+									{"name":"minimum"}
+								]
+							},
+							{"name" : "pmd",
+								"fields" : [
+									{"name":"average"},
+									{"name":"maximum"},
+									{"name":"minimum"}
+								]
+							},
+							{"name" : "opt",
+								"fields" : [
+									{"name":"average"},
+									{"name":"maximum"},
+									{"name":"minimum"}
+								]
+							},
+							{"name" : "opr",
+								"fields" : [
+									{"name":"average"},
+									{"name":"maximum"},
+									{"name":"minimum"}
+								]
+							},
+							{"name" : "dgd",
+								"fields" : [
+									{"name":"average"},
+									{"name":"maximum"},
+									{"name":"minimum"}
+								]
+							},
+							{"name" : "osnr",
+								"fields" : [
+									{"name":"average"},
+									{"name":"maximum"},
+									{"name":"minimum"}
+								]
+							}
+						]
+					}
+				]
+			}
+		},
+	{
+     "basepath" : "Cisco-IOS-XR-pmengine-oper:performance-management/optics/optics-ports/optics-port/optics-current/optics-second30/optics-second30-optics/optics-second30-optic",
+     "spec" : {
+     "fields" : [
+     {"name":"name", "tag": true},
+     {"name":"number", "tag": true},
+     {"name":"index"},
+     {"name":"cd", "fields" : [
+		     {"name":"average"},
+		     {"name":"maximum"},
+			   {"name":"minimum"}
+				                                  ]},
+  	 {"name":"pmd","fields" :
+  			 [{"name":"average"},
+				  {"name":"maximum"},
+				  {"name":"minimum"}
+                                          ]},
+     {"name":"opt","fields" :
+         [{"name":"average"},
+          {"name":"maximum"},
+          {"name":"minimum"}
+                                          ]},
+     {"name":"opr","fields" :
+         [{"name":"average"},
+          {"name":"maximum"},
+          {"name":"minimum"}
+                                           ]},
+     {"name":"dgd","fields" : [
+      		{"name":"average"},
+      		{"name":"maximum"},
+      		{"name":"minimum"}
+                                          ]},
+      {"name":"osnr","fields" : [
+      		{"name":"average"},
+				  {"name":"maximum"},
+				  {"name":"minimum"}]
+		      }
+				]
+	    }
+	  },
+	{
+	 "basepath" : "Cisco-IOS-XR-pmengine-oper:performance-management/otu/otu-ports/otu-port/otu-current/otu-second30/otu-second30fecs/otu-second30fec",
+	 "spec" : {
+	 "fields" : [
+	       {"name":"name", "tag": true},
+	       {"name":"number"},
+	       {"name":"index"},
+	       {"name":"pre-fec-ber", "fields" : [
+	           {"name":"average"},
+	           {"name":"maximum"},
+	           {"name":"minimum"}
+	                                            ]},
+	       {"name":"post-fec-ber","fields" :
+	           [{"name":"average"},
+	            {"name":"maximum"},
+	            {"name":"minimum"}
+	                                            ]},
+	       {"name":"ec-bits","fields" :
+	           [{"name":"data"},
+	            {"name":"threshold"}
+	                                            ]},
+	       {"name":"uc-words","fields" :
+	           [{"name":"data"},
+	            {"name":"threshold"}
+	            ]
+	         }
+	      ]
+	  }
+},
+{
+ "basepath" : "Cisco-IOS-XR-alarmgr-server-oper:alarms/brief/brief-card/brief-locations/brief-location/active",
+ "spec" : {
+ "fields" : [
+       {"name":"node-id", "tag": true},
+       {"name":"alarm-info",
+				 "fields" : [
+           {"name":"description"},
+           {"name":"set-time"},
+           {"name":"severity"},
+           {"name":"location"}
+         ]
+		   }
+     ]
+  }
+},
+{
+ "basepath" : "Cisco-IOS-XR-pmengine-oper:performance-management/otu/otu-ports/otu-port/otu-current/otu-second30/otu-second30otns/otu-second30otn",
+ "spec" : {
+ "fields" : [
+       {"name":"name", "tag": true},
+       {"name":"number"},
+       {"name":"index"},
+       {"name":"bbe-fe", "fields" :
+         [{"name":"data"},
+          {"name":"threshold"}
+                                            ]},
+       {"name":"bbe-ne","fields" :
+           [{"name":"data"},
+            {"name":"threshold"}
+                                            ]},
+       {"name":"bbe-ne","fields" :
+           [{"name":"data"},
+            {"name":"threshold"}
+                                            ]},
+       {"name":"bber-fe","fields" :
+           [{"name":"data"},
+            {"name":"threshold"}
+                                            ]},
+       {"name":"bber-ne","fields" :
+           [{"name":"data"},
+            {"name":"threshold"}
+                                            ]},
+       {"name":"es-fe","fields" :
+           [{"name":"data"},
+            {"name":"threshold"}
+                                            ]},
+       {"name":"es-ne","fields" :
+           [{"name":"data"},
+            {"name":"threshold"}
+                                            ]},
+       {"name":"esr-fe","fields" :
+           [{"name":"data"},
+            {"name":"threshold"}
+                                            ]},
+       {"name":"esr-ne","fields" :
+           [{"name":"data"},
+            {"name":"threshold"}
+                                            ]},
+       {"name":"ses-ne","fields" :
+           [{"name":"data"},
+            {"name":"threshold"}
+                                            ]},
+       {"name":"ses-fe","fields" :
+           [{"name":"data"},
+            {"name":"threshold"}
+                                            ]},
+       {"name":"sesr-ne","fields" :
+           [{"name":"data"},
+            {"name":"threshold"}
+                                            ]},
+       {"name":"sesr-fe","fields" :
+           [{"name":"data"},
+            {"name":"threshold"}
+            ]
+         }
+      ]
+  }
+},
+{
+"basepath" : "Cisco-IOS-XR-pmengine-oper:performance-management/ethernet/ethernet-ports/ethernet-port/ethernet-current/ethernet-second30/second30-ethers/second30-ether",
+"spec" : {
+"fields" : [
+     {"name":"name", "tag": true},
+     {"name":"slot-number"},
+     {"name":"if-in-octets", "fields" :
+       [{"name":"data"},
+        {"name":"threshold"}
+                                          ]},
+     {"name":"in-error-fragments","fields" :
+         [{"name":"data"},
+          {"name":"threshold"}
+                                          ]},
+     {"name":"in-good-bytes","fields" :
+         [{"name":"data"},
+          {"name":"threshold"}
+                                          ]},
+     {"name":"in-good-pkts","fields" :
+         [{"name":"data"},
+          {"name":"threshold"}
+                                          ]},
+     {"name":"in-ucast-pkt","fields" :
+         [{"name":"data"},
+          {"name":"threshold"}
+                                          ]},
+     {"name":"out-ucast-pkt","fields" :
+         [{"name":"data"},
+          {"name":"threshold"}
+                                          ]},
+     {"name":"rx-pkt","fields" :
+         [{"name":"data"},
+          {"name":"threshold"}
+                                          ]},
+     {"name":"rx-util","fields" :
+         [{"name":"data"},
+          {"name":"threshold"}
+                                          ]},
+     {"name":"tx-pkt","fields" :
+         [{"name":"data"},
+          {"name":"threshold"}
+                                          ]},
+     {"name":"tx-util","fields" :
+         [{"name":"data"},
+          {"name":"threshold"}
+			] }
+     ]
+   }
+ }
+]
